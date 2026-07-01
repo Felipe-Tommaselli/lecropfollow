@@ -1,0 +1,981 @@
+<sdf version="1.5">
+  <model name="model_plot">
+    <static>true</static>
+
+    <include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_0_197</name>
+      <pose>0.78 0.00859493432765372 0 0.0 0.0 0.15707963267948966</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_0_199</name>
+      <pose>0.78 0.604318459544044 0 0.0 0.0 3.01941960595019</pose>
+    </include>
+    <include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_0_200</name>
+      <pose>0.78 0.92644527 0 0.0 0.0 3.01941960595019</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_0_201</name>
+      <pose>0.78 1.2485720710655503 0 0.0 0.0 2.4609142453120048</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_0_203</name>
+      <pose>0.78 1.8132744933393914 0 0.0 0.0 6.021385919380437</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_0_205</name>
+      <pose>0.78 2.495308846564527 0 0.0 0.0 2.4609142453120048</pose>
+    </include>
+    <include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_0_206</name>
+      <pose>0.78 2.80290833 0 0.0 0.0 2.4609142453120048</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_0_207</name>
+      <pose>0.78 3.110507809060019 0 0.0 0.0 2.9321531433504737</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_0_209</name>
+      <pose>0.78 3.7275937663911125 0 0.0 0.0 0.22689280275926285</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_0_211</name>
+      <pose>0.78 4.2437941434434805 0 0.0 0.0 1.1693705988362009</pose>
+    </include>
+    <include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_0_212</name>
+      <pose>0.78 4.54021915 0 0.0 0.0 1.1693705988362009</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_0_213</name>
+      <pose>0.78 4.836644146607865 0 0.0 0.0 3.2288591161895095</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_0_215</name>
+      <pose>0.78 5.469874423059792 0 0.0 0.0 3.3335788713091694</pose>
+    </include>
+    <include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_0_216</name>
+      <pose>0.78 5.78034959 0 0.0 0.0 3.3335788713091694</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_0_217</name>
+      <pose>0.78 6.090824765904237 0 0.0 0.0 0.20943951023931956</pose>
+    </include>
+    <include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_0_218</name>
+      <pose>0.78 6.40960816 0 0.0 0.0 0.20943951023931956</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_0_219</name>
+      <pose>0.78 6.728391545595026 0 0.0 0.0 5.480333851262195</pose>
+    </include>
+    <include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_0_220</name>
+      <pose>0.78 7.02879881 0 0.0 0.0 5.480333851262195</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_0_221</name>
+      <pose>0.78 7.32920607511361 0 0.0 0.0 4.084070449666731</pose>
+    </include>
+    <include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_0_222</name>
+      <pose>0.78 7.61508239 0 0.0 0.0 4.084070449666731</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_0_223</name>
+      <pose>0.78 7.900958697858983 0 0.0 0.0 1.9198621771937625</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_0_225</name>
+      <pose>0.78 8.54025663577937 0 0.0 0.0 5.358160803622591</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_0_227</name>
+      <pose>0.78 9.141726983418838 0 0.0 0.0 2.548180707911721</pose>
+    </include>
+    <include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_0_228</name>
+      <pose>0.78 9.47685126 0 0.0 0.0 2.548180707911721</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_0_229</name>
+      <pose>0.78 9.81197552772033 0 0.0 0.0 3.8920842319473548</pose>
+    </include>
+    <include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_0_230</name>
+      <pose>0.78 10.08239049 0 0.0 0.0 3.8920842319473548</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_0_231</name>
+      <pose>0.715 10.352805445266995 0 0.0 0.0 0.8726646259971648</pose>
+    </include>
+    <include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_0_232</name>
+      <pose>0.715 10.65880189 0 0.0 0.0 0.8726646259971648</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_0_233</name>
+      <pose>0.715 10.964798343013909 0 0.0 0.0 2.705260340591211</pose>
+    </include>
+    <include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_0_234</name>
+      <pose>0.715 11.26209431 0 0.0 0.0 2.705260340591211</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_0_235</name>
+      <pose>0.715 11.559390276855224 0 0.0 0.0 0.6457718232379019</pose>
+    </include>
+    <include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_0_236</name>
+      <pose>0.715 11.86940034 0 0.0 0.0 0.6457718232379019</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_0_237</name>
+      <pose>0.715 12.179410399091381 0 0.0 0.0 0.0</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_0_239</name>
+      <pose>0.715 12.848557472244947 0 0.0 0.0 1.4486232791552935</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_0_241</name>
+      <pose>0.715 13.335958901374 0 0.0 0.0 3.5779249665883754</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_0_244</name>
+      <pose>0.715 14.312959432096134 0 0.0 0.0 4.223696789826278</pose>
+    </include>
+    <include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_0_245</name>
+      <pose>0.715 14.64116904 0 0.0 0.0 4.223696789826278</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_0_246</name>
+      <pose>0.715 14.969378642265788 0 0.0 0.0 5.707226654021458</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_0_248</name>
+      <pose>0.715 15.531889966406707 0 0.0 0.0 5.497787143782138</pose>
+    </include>
+    <include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_0_249</name>
+      <pose>0.715 15.82882609 0 0.0 0.0 5.497787143782138</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_0_250</name>
+      <pose>0.715 16.12576222307757 0 0.0 0.0 2.3736477827122884</pose>
+    </include>
+    <include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_0_251</name>
+      <pose>0.715 16.46323430 0 0.0 0.0 2.3736477827122884</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_0_252</name>
+      <pose>0.715 16.80070637781182 0 0.0 0.0 3.12413936106985</pose>
+    </include>
+    <include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_0_253</name>
+      <pose>0.715 17.07879843 0 0.0 0.0 3.12413936106985</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_0_254</name>
+      <pose>0.715 17.356890484137416 0 0.0 0.0 5.82939970166106</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_0_256</name>
+      <pose>0.715 17.911239119095676 0 0.0 0.0 2.3387411976724017</pose>
+    </include>
+    <include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_0_257</name>
+      <pose>0.715 18.23995411 0 0.0 0.0 2.3387411976724017</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_0_258</name>
+      <pose>0.715 18.56866911002355 0 0.0 0.0 4.118977034706618</pose>
+    </include>
+    <include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_0_259</name>
+      <pose>0.715 18.85528705 0 0.0 0.0 4.118977034706618</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_0_260</name>
+      <pose>0.715 19.141904991811764 0 0.0 0.0 2.9845130209103035</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_0_262</name>
+      <pose>0.715 19.811266004382336 0 0.0 0.0 0.03490658503988659</pose>
+    </include>
+    <include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_0_263</name>
+      <pose>0.715 20.10839341 0 0.0 0.0 0.03490658503988659</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_0_264</name>
+      <pose>0.715 20.405520809036915 0 0.0 0.0 0.29670597283903605</pose>
+    </include>
+    <include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_0_265</name>
+      <pose>0.715 20.76090992 0 0.0 0.0 0.29670597283903605</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_0_266</name>
+      <pose>0.715 21.116299040407956 0 0.0 0.0 1.0122909661567112</pose>
+    </include>
+    <include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_0_267</name>
+      <pose>0.715 21.34557024 0 0.0 0.0 1.0122909661567112</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_0_268</name>
+      <pose>0.715 21.57484143683173 0 0.0 0.0 1.1519173063162575</pose>
+    </include>
+    <include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_0_269</name>
+      <pose>0.715 21.91540734 0 0.0 0.0 1.1519173063162575</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_0_270</name>
+      <pose>0.715 22.25597324315723 0 0.0 0.0 6.2482787221397</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_0_272</name>
+      <pose>0.715 22.81104156581477 0 0.0 0.0 2.8448866807507573</pose>
+    </include>
+    <include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_0_273</name>
+      <pose>0.715 23.15305795 0 0.0 0.0 2.8448866807507573</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_0_274</name>
+      <pose>0.715 23.49507432733307 0 0.0 0.0 4.084070449666731</pose>
+    </include>
+    <include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_0_275</name>
+      <pose>0.715 23.73889568 0 0.0 0.0 4.084070449666731</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_0_276</name>
+      <pose>0.715 23.982717028432347 0 0.0 0.0 1.3962634015954636</pose>
+    </include>
+    <include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_0_277</name>
+      <pose>0.715 24.33633864 0 0.0 0.0 1.3962634015954636</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_0_278</name>
+      <pose>0.715 24.689960260017916 0 0.0 0.0 3.4033920413889427</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_0_280</name>
+      <pose>0.715 25.265015847987254 0 0.0 0.0 2.722713633111154</pose>
+    </include>
+    <include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_0_281</name>
+      <pose>0.715 25.61032810 0 0.0 0.0 2.722713633111154</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_0_282</name>
+      <pose>0.715 25.95564034303193 0 0.0 0.0 0.4014257279586958</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_0_284</name>
+      <pose>0.715 26.510050704998978 0 0.0 0.0 1.4835298641951802</pose>
+    </include>
+    <include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_0_285</name>
+      <pose>0.715 26.84054824 0 0.0 0.0 1.4835298641951802</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_0_286</name>
+      <pose>0.715 27.17104577483048 0 0.0 0.0 3.0892327760299634</pose>
+    </include>
+    <include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_0_287</name>
+      <pose>0.715 27.43921198 0 0.0 0.0 3.0892327760299634</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_0_288</name>
+      <pose>0.715 27.707378185004483 0 0.0 0.0 2.8623399732707004</pose>
+    </include>
+    <include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_0_289</name>
+      <pose>0.715 27.99475659 0 0.0 0.0 2.8623399732707004</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_0_290</name>
+      <pose>0.715 28.282135003039308 0 0.0 0.0 2.5656340004316642</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_0_292</name>
+      <pose>0.715 29.01417815028271 0 0.0 0.0 2.827433388230814</pose>
+    </include>
+    <include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_0_293</name>
+      <pose>0.715 29.29238710 0 0.0 0.0 2.827433388230814</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_0_294</name>
+      <pose>0.715 29.570596049572952 0 0.0 0.0 1.5184364492350666</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_0_296</name>
+      <pose>0.715 30.177373925418866 0 0.0 0.0 5.707226654021458</pose>
+    </include>
+    <include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_0_297</name>
+      <pose>0.715 30.46282510 0 0.0 0.0 5.707226654021458</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_0_298</name>
+      <pose>0.715 30.748276268427777 0 0.0 0.0 0.9948376736367679</pose>
+    </include>
+    <include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_0_299</name>
+      <pose>0.715 31.08383781 0 0.0 0.0 0.9948376736367679</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_0_300</name>
+      <pose>0.715 31.419399358693582 0 0.0 0.0 6.19591884457987</pose>
+    </include>
+    <include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_0_301</name>
+      <pose>0.715 31.74364827 0 0.0 0.0 6.19591884457987</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_0_302</name>
+      <pose>0.715 32.06789718037348 0 0.0 0.0 0.10471975511965978</pose>
+    </include>
+    <include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_0_303</name>
+      <pose>0.715 32.35220637 0 0.0 0.0 0.10471975511965978</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_0_304</name>
+      <pose>0.715 32.636515553250796 0 0.0 0.0 2.059488517353309</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_0_306</name>
+      <pose>0.715 33.20595443605181 0 0.0 0.0 1.1868238913561442</pose>
+    </include>
+    <include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_0_307</name>
+      <pose>0.715 33.47907076 0 0.0 0.0 1.1868238913561442</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_0_308</name>
+      <pose>0.715 33.75218708362628 0 0.0 0.0 0.4188790204786391</pose>
+    </include>
+    <include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_0_309</name>
+      <pose>0.715 34.08693715 0 0.0 0.0 0.4188790204786391</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_0_310</name>
+      <pose>0.715 34.421687217208024 0 0.0 0.0 0.6457718232379019</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_0_312</name>
+      <pose>0.715 34.99556642452193 0 0.0 0.0 6.19591884457987</pose>
+    </include>
+    <include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_0_313</name>
+      <pose>0.715 35.33116153 0 0.0 0.0 6.19591884457987</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_0_314</name>
+      <pose>0.715 35.66675663785984 0 0.0 0.0 5.707226654021458</pose>
+    </include>
+    <include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_0_315</name>
+      <pose>0.715 35.95836062 0 0.0 0.0 5.707226654021458</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_0_316</name>
+      <pose>0.715 36.24996460405333 0 0.0 0.0 0.9773843811168246</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_0_318</name>
+      <pose>0.715 36.884789338309574 0 0.0 0.0 5.82939970166106</pose>
+    </include>
+    <include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_0_319</name>
+      <pose>0.715 37.17878643 0 0.0 0.0 5.82939970166106</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_0_320</name>
+      <pose>0.715 37.472783520911314 0 0.0 0.0 1.5533430342749532</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_0_322</name>
+      <pose>0.715 38.10041997228612 0 0.0 0.0 4.71238898038469</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_0_324</name>
+      <pose>0.715 38.76175421944016 0 0.0 0.0 1.1693705988362009</pose>
+    </include>
+    <include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_0_325</name>
+      <pose>0.715 39.04169322 0 0.0 0.0 1.1693705988362009</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_0_326</name>
+      <pose>0.715 39.321632227679885 0 0.0 0.0 3.246312408709453</pose>
+    </include>
+    <include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_0_327</name>
+      <pose>0.715 39.64123955 0 0.0 0.0 3.246312408709453</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_0_328</name>
+      <pose>0.715 39.960846879504054 0 0.0 0.0 4.084070449666731</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_2_0</name>
+      <pose>1.56 0.0722431121896649 0 0.0 0.0 0.4188790204786391</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_2_3</name>
+      <pose>1.56 0.9149569423502892 0 0.0 0.0 1.9024088846738192</pose>
+    </include>
+    <include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_2_4</name>
+      <pose>1.56 1.25294735 0 0.0 0.0 1.9024088846738192</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_2_5</name>
+      <pose>1.56 1.59093775228701 0 0.0 0.0 5.288347633542818</pose>
+    </include>
+    <include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_2_6</name>
+      <pose>1.56 1.85587054 0 0.0 0.0 5.288347633542818</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_2_7</name>
+      <pose>1.56 2.120803323638079 0 0.0 0.0 1.5882496193148399</pose>
+    </include>
+    <include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_2_8</name>
+      <pose>1.56 2.41316729 0 0.0 0.0 1.5882496193148399</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_2_9</name>
+      <pose>1.56 2.7055312585385534 0 0.0 0.0 3.735004599267865</pose>
+    </include>
+    <include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_2_10</name>
+      <pose>1.56 3.01817609 0 0.0 0.0 3.735004599267865</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_2_11</name>
+      <pose>1.56 3.330820923755391 0 0.0 0.0 5.777039824101231</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_2_13</name>
+      <pose>1.56 3.9422446996040326 0 0.0 0.0 3.6302848441482056</pose>
+    </include>
+    <include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_2_14</name>
+      <pose>1.56 4.26973195 0 0.0 0.0 3.6302848441482056</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_2_15</name>
+      <pose>1.56 4.5972191976072105 0 0.0 0.0 3.595378259108319</pose>
+    </include>
+    <include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_2_16</name>
+      <pose>1.56 4.92776640 0 0.0 0.0 3.595378259108319</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_2_17</name>
+      <pose>1.56 5.258313602567546 0 0.0 0.0 3.6651914291880923</pose>
+    </include>
+    <include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_2_18</name>
+      <pose>1.56 5.68111976 0 0.0 0.0 3.6651914291880923</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_2_20</name>
+      <pose>1.56 6.103925923630441 0 0.0 0.0 4.485496177625427</pose>
+    </include>
+    <include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_2_21</name>
+      <pose>1.56 6.42445128 0 0.0 0.0 4.485496177625427</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_2_22</name>
+      <pose>1.56 6.7449766295643485 0 0.0 0.0 5.375614096142535</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_2_24</name>
+      <pose>1.56 7.3217006443866435 0 0.0 0.0 3.7000980142279785</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_2_27</name>
+      <pose>1.56 8.18209896556657 0 0.0 0.0 5.044001538263612</pose>
+    </include>
+    <include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_2_28</name>
+      <pose>1.56 8.51127921 0 0.0 0.0 5.044001538263612</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_2_29</name>
+      <pose>1.56 8.840459444922976 0 0.0 0.0 4.642575810304916</pose>
+    </include>
+    <include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_2_30</name>
+      <pose>1.56 9.31603522 0 0.0 0.0 4.642575810304916</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_2_32</name>
+      <pose>1.56 9.791610990182422 0 0.0 0.0 4.153883619746504</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_2_35</name>
+      <pose>1.625 10.65619092240277 0 0.0 0.0 2.4609142453120048</pose>
+    </include>
+    <include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_2_36</name>
+      <pose>1.625 10.96206667 0 0.0 0.0 2.4609142453120048</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_2_37</name>
+      <pose>1.625 11.267942421546527 0 0.0 0.0 1.117010721276371</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_2_40</name>
+      <pose>1.625 12.149254848354301 0 0.0 0.0 1.9896753472735358</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_2_42</name>
+      <pose>1.625 12.776467284209291 0 0.0 0.0 2.478367537831948</pose>
+    </include>
+    <include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_2_43</name>
+      <pose>1.625 13.10766625 0 0.0 0.0 2.478367537831948</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_2_44</name>
+      <pose>1.625 13.438865223423544 0 0.0 0.0 5.218534463463046</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_2_47</name>
+      <pose>1.625 14.311562907365612 0 0.0 0.0 5.6374134839416845</pose>
+    </include>
+    <include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_2_48</name>
+      <pose>1.625 14.63417828 0 0.0 0.0 5.6374134839416845</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_2_49</name>
+      <pose>1.625 14.95679365136133 0 0.0 0.0 4.537856055185257</pose>
+    </include>
+    <include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_2_50</name>
+      <pose>1.625 15.25446452 0 0.0 0.0 4.537856055185257</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_2_51</name>
+      <pose>1.625 15.552135381397202 0 0.0 0.0 2.3911010752322315</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_2_53</name>
+      <pose>1.625 16.21185230944986 0 0.0 0.0 2.530727415391778</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_2_56</name>
+      <pose>1.625 17.102550354114655 0 0.0 0.0 5.934119456780721</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_2_58</name>
+      <pose>1.625 17.718838725051555 0 0.0 0.0 0.17453292519943295</pose>
+    </include>
+    <include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_2_59</name>
+      <pose>1.625 18.00359018 0 0.0 0.0 0.17453292519943295</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_2_60</name>
+      <pose>1.625 18.28834164345712 0 0.0 0.0 4.084070449666731</pose>
+    </include>
+    <include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_2_61</name>
+      <pose>1.625 18.59177885 0 0.0 0.0 4.084070449666731</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_2_62</name>
+      <pose>1.625 18.89521605673562 0 0.0 0.0 6.126105674500097</pose>
+    </include>
+    <include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_2_63</name>
+      <pose>1.625 19.17453401 0 0.0 0.0 6.126105674500097</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_2_64</name>
+      <pose>1.625 19.45385195820251 0 0.0 0.0 4.520402762665314</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_2_66</name>
+      <pose>1.625 20.102740928495336 0 0.0 0.0 5.358160803622591</pose>
+    </include>
+    <include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_2_67</name>
+      <pose>1.625 20.42083225 0 0.0 0.0 5.358160803622591</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_2_68</name>
+      <pose>1.625 20.7389235712109 0 0.0 0.0 3.7699111843077517</pose>
+    </include>
+    <include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_2_69</name>
+      <pose>1.625 21.07187967 0 0.0 0.0 3.7699111843077517</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_2_70</name>
+      <pose>1.625 21.404835768364755 0 0.0 0.0 6.161012259539984</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_2_73</name>
+      <pose>1.625 22.28756521786409 0 0.0 0.0 1.9722220547535925</pose>
+    </include>
+    <include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_2_74</name>
+      <pose>1.625 22.58088413 0 0.0 0.0 1.9722220547535925</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_2_75</name>
+      <pose>1.625 22.874203034503722 0 0.0 0.0 5.201081170943102</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_2_77</name>
+      <pose>1.625 23.409803879599792 0 0.0 0.0 4.310963252425994</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_2_80</name>
+      <pose>1.625 24.381074496686136 0 0.0 0.0 3.8048177693476384</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_2_82</name>
+      <pose>1.625 25.021455440983225 0 0.0 0.0 1.5533430342749532</pose>
+    </include>
+    <include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_2_83</name>
+      <pose>1.625 25.48948187 0 0.0 0.0 1.5533430342749532</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_2_85</name>
+      <pose>1.625 25.95750830378677 0 0.0 0.0 3.1066860685499065</pose>
+    </include>
+    <include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_2_86</name>
+      <pose>1.625 26.22684406 0 0.0 0.0 3.1066860685499065</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_2_87</name>
+      <pose>1.625 26.496179812789883 0 0.0 0.0 2.775073510670984</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_2_89</name>
+      <pose>1.625 27.09849817943908 0 0.0 0.0 1.7278759594743862</pose>
+    </include>
+    <include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_2_90</name>
+      <pose>1.625 27.40515166 0 0.0 0.0 1.7278759594743862</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_2_91</name>
+      <pose>1.625 27.711805140816114 0 0.0 0.0 2.5830872929516078</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_2_94</name>
+      <pose>1.625 28.647495912578098 0 0.0 0.0 5.305800926062762</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_2_96</name>
+      <pose>1.625 29.289541779285088 0 0.0 0.0 2.705260340591211</pose>
+    </include>
+    <include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_2_97</name>
+      <pose>1.625 29.58956855 0 0.0 0.0 2.705260340591211</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_2_98</name>
+      <pose>1.625 29.889595323775666 0 0.0 0.0 1.3788101090755203</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_2_100</name>
+      <pose>1.625 30.474699769313986 0 0.0 0.0 5.410520681182422</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_2_102</name>
+      <pose>1.625 31.101107391917523 0 0.0 0.0 6.1086523819801535</pose>
+    </include>
+    <include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_2_103</name>
+      <pose>1.625 31.40765472 0 0.0 0.0 6.1086523819801535</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_2_104</name>
+      <pose>1.625 31.71420203965975 0 0.0 0.0 3.7524578917878086</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_2_107</name>
+      <pose>1.625 32.62932280314702 0 0.0 0.0 3.5604716740684323</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_2_109</name>
+      <pose>1.625 33.27397994001854 0 0.0 0.0 5.794493116621174</pose>
+    </include>
+    <include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_2_110</name>
+      <pose>1.625 33.71508021 0 0.0 0.0 5.794493116621174</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_2_112</name>
+      <pose>1.625 34.15618048027995 0 0.0 0.0 2.5656340004316642</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_2_114</name>
+      <pose>1.625 34.73717638464077 0 0.0 0.0 5.1312680008633285</pose>
+    </include>
+    <include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_2_115</name>
+      <pose>1.625 35.05401767 0 0.0 0.0 5.1312680008633285</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_2_116</name>
+      <pose>1.625 35.37085894975716 0 0.0 0.0 2.600540585471551</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_2_118</name>
+      <pose>1.625 35.94105098582321 0 0.0 0.0 2.234021442552742</pose>
+    </include>
+    <include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_2_119</name>
+      <pose>1.625 36.36893891 0 0.0 0.0 2.234021442552742</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_2_121</name>
+      <pose>1.625 36.79682683170542 0 0.0 0.0 1.7278759594743862</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_2_123</name>
+      <pose>1.625 37.54135756138237 0 0.0 0.0 3.717551306747922</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_2_125</name>
+      <pose>1.625 38.06030419610935 0 0.0 0.0 1.117010721276371</pose>
+    </include>
+    <include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_2_126</name>
+      <pose>1.625 38.37953038 0 0.0 0.0 1.117010721276371</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_2_127</name>
+      <pose>1.625 38.698756561289144 0 0.0 0.0 0.4188790204786391</pose>
+    </include>
+    <include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_2_128</name>
+      <pose>1.625 38.96528439 0 0.0 0.0 0.4188790204786391</pose>
+    </include>
+<include>
+      <uri>model://sorghum_variant_2</uri>
+      <name>plant_2_129</name>
+      <pose>1.625 39.2318122178856 0 0.0 0.0 5.445427266222308</pose>
+    </include>
+</model>
+</sdf>

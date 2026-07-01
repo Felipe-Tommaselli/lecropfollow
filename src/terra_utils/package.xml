@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>terra_utils</name>
+  <version>1.0.0</version>
+  <description>
+    Utility nodes for crop-row following simulation.
+    rowfollow_gt.py: ground-truth distance/heading error publisher.
+    perception_stub.py: zero-filled heatmap stub for pipeline testing.
+  </description>
+  <maintainer email="todo@todo.todo">maintainer</maintainer>
+  <license>MIT</license>
+  <buildtool_depend>catkin</buildtool_depend>
+  <exec_depend>rospy</exec_depend>
+  <exec_depend>nav_msgs</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+</package>

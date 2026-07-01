@@ -1,0 +1,55 @@
+<?xml version="1.0" ?>
+<sdf version='1.5'>
+     <world name='default'>
+
+          <gui>
+               <camera name="user_camera">
+                    <pose>-3.8 0.0 5.117045 0.0 0.411456 0.0</pose>
+               </camera>
+          </gui>
+
+          <light name='sundir' type='directional'>
+               <cast_shadows>1</cast_shadows>
+               <pose>0 0 10 0 -0 0</pose>
+               <diffuse>1.0 0.95 0.8 1</diffuse>
+               <specular>0.7 0.7 0.7 1</specular>
+               <attenuation>
+                    <range>1000</range>
+                    <constant>0.9</constant>
+                    <linear>0.01</linear>
+                    <quadratic>0.001</quadratic>
+               </attenuation>
+               <direction>-0.3 0.4 -1.0</direction>
+          </light>
+
+          <physics type="ode">
+               <max_step_size>0.001</max_step_size>
+               <real_time_factor>1.0</real_time_factor>
+               <real_time_update_rate>1000</real_time_update_rate>
+               <gravity>0 0 -9.8</gravity>
+          </physics>
+
+          <scene>
+               <sky>
+                    <clouds>
+                         <speed>12</speed>
+                    </clouds>
+               </sky>
+
+               <grid>true</grid>
+          </scene>
+
+          <include>
+               <uri>model://heightmap_h0</uri>
+               <name>height_map</name>
+          </include>
+
+          <include>
+               <uri>model://tdmpc_h0_color</uri>
+               <name>plot</name>
+               <pose>0 0.76 0 0 0 -1.5708</pose>
+
+          </include>
+
+     </world>
+</sdf>

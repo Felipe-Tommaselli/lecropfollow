@@ -1,0 +1,123 @@
+defaults:
+    - override hydra/hydra_logging: disabled
+    - override hydra/job_logging: disabled
+
+# ── Robot adapter ────────────────────────────────────────────────────────────
+# robot_ns must match the namespace used in terra_gazebo/launch/terra_gazebo.launch
+robot_ns: robot
+# Robot-specific tuning — adjust these for your platform:
+#   max_distance   max forward travel before episode ends (m)
+#   obs_shape      total observation vector length (2 action floats + heatmap floats)
+#   action_dim     number of action dimensions
+#   max_ep_steps   maximum steps per episode
+# ─────────────────────────────────────────────────────────────────────────────
+
+# environment
+task: cropfollow
+obs: state
+logging: false
+launchfile: multi_robot_scenario.launch
+max_distance: 120
+
+# pre-training
+#checkpoint: /workspace/checkpoints/2025-10-14_14-27-49-final.pt
+prior_coef: 0.2  # Stronger BC for offline data
+
+# evaluation
+eval_episodes: 10
+eval_freq: 30000
+patience: 10
+eval_on_every_reset: false
+
+# logging
+wandb_project: Cropfollow-input # Cropfollow-train 
+wandb_entity: arthurpompeu-usp-universidade-de-s-o-paulo
+wandb_silent: false
+enable_wandb: true
+save_csv: true
+
+# training
+steps: 300000
+batch_size: 512
+reward_coef: 0.1
+value_coef: 0.1
+consistency_coef: 20
+rho: 0.5
+lr: 3.75e-4
+lr_schedule: cosine
+enc_lr_scale: 0.3
+grad_clip_norm: 20
+tau: 0.01
+discount_denom: 5
+discount_min: 0.95
+discount_max: 0.995 
+buffer_size: 1_000_000 
+exp_name: default
+data_dir: ???
+
+# planning
+mpc: true
+iterations: 6
+num_samples: 512
+num_elites: 64
+num_pi_trajs: 24
+horizon: 3
+min_std: 0.05
+max_std: 2
+temperature: 0.5
+
+# actor
+log_std_min: -10
+log_std_max: 2
+entropy_coef: 1e-4
+
+# critic
+num_bins: 101
+vmin: -10
+vmax: +10
+
+# architecture
+model_size: 5 
+num_enc_layers: 2
+enc_dim: 256
+num_channels: 32
+mlp_dim: 512
+latent_dim: 512
+task_dim: 96
+num_q: 5
+dropout: 0.01
+simnorm_dim: 8
+
+# misc
+save_video: true
+save_agent: true
+seed: 1
+
+# convenience
+work_dir: /ros_ws/lecropfollow/tdmpc2/logs/cropfollow/1/default
+task_title: Cropfollow
+multitask: false
+tasks: "cropfollow"
+obs_shape: 13442  #13440 
+image_size: 128
+action_dim: 2
+max_ep_steps: 500
+episode_length: 500
+obs_shapes: ???
+action_dims: ???
+episode_lengths: ???
+bootstrap_eps: ???
+seed_steps: 5500
+bin_size: 0.2
+
+# speedups
+compile: False
+
+#Curriculum learning
+curriculum_learning: false
+
+# hydra
+hydra:  
+  output_subdir: null  
+  run:  
+    dir: .

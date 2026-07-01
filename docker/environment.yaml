@@ -1,0 +1,50 @@
+name: tdmpc2
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.9
+  - pip=24.0
+  - openssl>=3.0
+  - pip:
+    # --- PyTorch (CUDA 12.4 wheels) ---
+    - --extra-index-url https://download.pytorch.org/whl/cu124
+    - torch==2.6.0
+    - torchvision==0.21.0
+
+    # --- TD-MPC2 core ---
+    - tensordict>=0.1.0
+    - torchrl>=0.1.0
+    - gymnasium==0.29.1
+    - hydra-core==1.3.2
+    - omegaconf
+
+    # --- numerics / data / vision ---
+    - numpy==1.22.4
+    - pandas>=2.1.0
+    - scipy==1.10.1
+    - opencv-python==4.5.5.64
+    - pillow==10.2.0
+
+    # --- logging / visualization (wandb video needs ffmpeg backends) ---
+    - wandb
+    - matplotlib==3.7.1
+    - moviepy==1.0.3
+    - imageio==2.34.1
+    - imageio-ffmpeg==0.4.9
+    - tqdm==4.66.4
+    - colorful
+    - termcolor==2.4.0
+    - protobuf==4.25.2
+
+    # --- ROS Python tooling (rospy + catkin build under conda Python 3.9) ---
+    - rospkg
+    - catkin_pkg
+    - empy==3.3.4
+    - pyyaml
+    - defusedxml
+    - netifaces
+
+    # --- build ---
+    - setuptools==60.0.0
+    - wheel>=0.38

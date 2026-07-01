@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<!--
+  Main simulation launch file for TD-MPC2 crop-following.
+
+  Starts:
+    1. Gazebo with farm.world
+    2. Generic diff-drive robot (robot_description/urdf/robot.urdf.xacro)
+    3. rowfollow_gt     — ground-truth distance/heading error publisher
+    4. perception_stub  — zero-fill heatmap stub (replace with your perception model)
+
+  Key args:
+    robot_ns    Robot topic namespace; must match robot_ns in tdmpc2/config.yaml
+    world       World file name (relative to terra_worlds/worlds/)
+    gui         Set true to open Gazebo GUI (disabled by default for training)
+    x/y/z       Robot spawn position
+-->
+<launch>
+  <arg name="robot_ns"    default="robot"/>
+  <arg name="world"       default="farm.world"/>
+  <arg name="gui"         default="false"/>
+  <arg name="paused"      default="false"/>
+  <arg name="verbose"     default="false"/>
+  <arg name="x"           default="0"/>
+  <arg name="y"           default="-0.4"/>
+  <arg name="z"           default="0.3"/>
+  <arg name="robot_model" default="$(find robot_description)/urdf/robot.urdf.xacro"/>
+
+  <!-- Make terra_worlds models visible to Gazebo -->
+  <env name="GAZEBO_MODEL_PATH"
+       value="$(find terra_worlds)/models:$(optenv GAZEBO_MODEL_PATH)"/>
+
+  <!-- Global param so Python nodes can read the namespace -->
+  <param name="/robot_ns" value="$(arg robot_ns)"/>
+
+  <!-- 1. Gazebo world -->
+  <include file="$(find terra_gazebo)/launch/world_template.launch">
+    <arg name="world_name" value="$(find terra_worlds)/worlds/$(arg world)"/>
+    <arg name="paused"     value="$(arg paused)"/>
+    <arg name="gui"        value="$(arg gui)"/>
+    <arg name="verbose"    value="$(arg verbose)"/>
+  </include>
+
+  <!-- 2. Robot -->
+  <group ns="$(arg robot_ns)">
+    <param name="robot_description"
+           command="xacro $(arg robot_model) robot_ns:=$(arg robot_ns)"/>
+    <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model"
+          respawn="false" output="screen"
+          args="-urdf -model robot
+                -x $(arg x) -y $(arg y) -z $(arg z)
+                -param robot_description"/>
+  </group>
+
+  <!-- 3. Ground-truth row error -->
+  <node pkg="terra_utils" type="rowfollow_gt.py"
+        name="heading_distance_gt" output="log"/>
+
+  <!-- 4. Perception stub (replace with your perception node) -->
+  <node pkg="terra_utils" type="perception_stub.py"
+        name="perception_stub" output="log"/>
+
+</launch>
