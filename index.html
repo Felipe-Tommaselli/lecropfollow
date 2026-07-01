@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Primary Meta Tags -->
+  <meta name="title" content="LeCropFollow: Latent Space Planning for Navigation in Unstructured Crop Fields">
+  <meta name="description"
+    content="A visual navigation framework that plans in a learned latent space over uncompressed semantic heatmaps, enabling zero-shot under-canopy crop navigation without GNSS.">
+  <meta name="keywords"
+    content="Field Robots, Representation Learning, Agriculture Robotics, Under-canopy Navigation, TD-MPC2, Model-Based Reinforcement Learning, Latent Planning, Sim-to-Real, Crop Following">
+  <meta name="author"
+    content="Felipe Tommaselli, Francisco Affonso, Arthur Pompeu, Gianluca Capezzuto, Arun Narenthiran Sivakumar, Girish Chowdhary, Marcelo Becker">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="English">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Mobile Robotics Group, CRob — EESC/USP">
+  <meta property="og:title" content="LeCropFollow: Latent Space Planning for Navigation in Unstructured Crop Fields">
+  <meta property="og:description"
+    content="A visual navigation framework that plans in a learned latent space over uncompressed semantic heatmaps, enabling zero-shot under-canopy crop navigation without GNSS.">
+  <meta property="og:url" content="https://felipe-tommaselli.github.io/lecropfollow/">
+  <!-- TODO: create a 1200x630px preview image at static/images/social_preview.png -->
+  <meta property="og:image" content="https://felipe-tommaselli.github.io/lecropfollow/static/images/social_preview.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="LeCropFollow - Latent Space Planning for Crop Field Navigation">
+  <meta property="article:published_time" content="2026-06-11T00:00:00.000Z">
+  <meta property="article:author" content="Felipe Tommaselli">
+  <meta property="article:section" content="Research">
+  <meta property="article:tag" content="Field Robots">
+  <meta property="article:tag" content="Representation Learning">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- TODO: replace with your lab/institution Twitter handle -->
+  <meta name="twitter:site" content="@YOUR_TWITTER_HANDLE">
+  <meta name="twitter:creator" content="@YOUR_TWITTER_HANDLE">
+  <meta name="twitter:title" content="LeCropFollow: Latent Space Planning for Navigation in Unstructured Crop Fields">
+  <meta name="twitter:description"
+    content="A visual navigation framework that plans in a learned latent space over uncompressed semantic heatmaps, enabling zero-shot under-canopy crop navigation without GNSS.">
+  <meta name="twitter:image"
+    content="https://felipe-tommaselli.github.io/lecropfollow/static/images/social_preview.png">
+  <meta name="twitter:image:alt" content="LeCropFollow - Latent Space Planning for Crop Field Navigation">
+
+  <!-- Academic/Research Specific -->
+  <meta name="citation_title" content="LeCropFollow: Latent Space Planning for Navigation in Unstructured Crop Fields">
+  <meta name="citation_author" content="Tommaselli, Felipe Andrade G.">
+  <meta name="citation_author" content="Affonso, Francisco">
+  <meta name="citation_author" content="Pompeu, Arthur">
+  <meta name="citation_author" content="Capezzuto, Gianluca">
+  <meta name="citation_author" content="Sivakumar, Arun Narenthiran">
+  <meta name="citation_author" content="Chowdhary, Girish">
+  <meta name="citation_author" content="Becker, Marcelo">
+  <meta name="citation_publication_date" content="2026">
+  <meta name="citation_journal_title" content="IEEE Robotics and Automation Letters">
+  <!-- TODO: replace with the hosted paper PDF URL -->
+  <meta name="citation_pdf_url" content="https://felipe-tommaselli.github.io/lecropfollow/static/pdfs/paper.pdf">
+
+  <!-- Additional SEO -->
+  <meta name="theme-color" content="#B85420">
+  <meta name="msapplication-TileColor" content="#B85420">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://ajax.googleapis.com">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+
+
+  <title>lecropfollow</title>
+
+  <!-- Favicon and App Icons -->
+  <!-- TODO: replace static/images/favicon.ico with your own (current one ships with the template) -->
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link rel="apple-touch-icon" href="static/images/favicon.ico">
+
+  <!-- Critical CSS - Load synchronously -->
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/index.css?v=brand-20260627">
+
+  <!-- Non-critical CSS - Load asynchronously -->
+  <link rel="preload" href="static/css/bulma-carousel.min.css" as="style"
+    onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="static/css/bulma-slider.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="static/css/fontawesome.all.min.css" as="style"
+    onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style"
+    onload="this.onload=null;this.rel='stylesheet'">
+
+  <!-- Fallback for browsers that don't support preload -->
+  <noscript>
+    <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  </noscript>
+
+  <!-- Fonts - Optimized loading -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Defer non-critical JavaScript -->
+  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script defer src="static/js/bulma-carousel.min.js"></script>
+  <script defer src="static/js/bulma-slider.min.js"></script>
+  <script defer src="static/js/index.js"></script>
+
+  <!-- Structured Data for Academic Papers -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "headline": "LeCropFollow: Latent Space Planning for Navigation in Unstructured Crop Fields",
+    "description": "A visual navigation framework that plans in a learned latent space over uncompressed semantic heatmaps, enabling zero-shot under-canopy crop navigation without GNSS.",
+    "author": [
+      { "@type": "Person", "name": "Felipe Andrade G. Tommaselli", "affiliation": { "@type": "Organization", "name": "University of Sao Paulo" } },
+      { "@type": "Person", "name": "Francisco Affonso", "affiliation": { "@type": "Organization", "name": "University of Illinois Urbana-Champaign" } },
+      { "@type": "Person", "name": "Arthur Pompeu", "affiliation": { "@type": "Organization", "name": "University of Sao Paulo" } },
+      { "@type": "Person", "name": "Gianluca Capezzuto", "affiliation": { "@type": "Organization", "name": "University of Sao Paulo" } },
+      { "@type": "Person", "name": "Arun Narenthiran Sivakumar", "affiliation": { "@type": "Organization", "name": "University of Illinois Urbana-Champaign" } },
+      { "@type": "Person", "name": "Girish Chowdhary", "affiliation": { "@type": "Organization", "name": "University of Illinois Urbana-Champaign" } },
+      { "@type": "Person", "name": "Marcelo Becker", "affiliation": { "@type": "Organization", "name": "University of Sao Paulo" } }
+    ],
+    "datePublished": "2026-06-11",
+    "publisher": { "@type": "Organization", "name": "IEEE Robotics and Automation Letters" },
+    "url": "https://felipe-tommaselli.github.io/lecropfollow/",
+    "image": "https://felipe-tommaselli.github.io/lecropfollow/static/images/social_preview.png",
+    "keywords": ["Field Robots", "Representation Learning", "Agriculture Robotics", "Under-canopy Navigation", "Model-Based Reinforcement Learning", "Sim-to-Real"],
+    "abstract": "Unstructured navigational features, such as irregular planting or discontinuities, remain the primary failure mode for under-canopy agricultural robots. LeCropFollow is a visual navigation framework that bypasses explicit geometric modeling in favor of a learned latent representation, integrating a self-supervised semantic heatmap extractor with TD-MPC2 to optimize trajectories directly within a latent manifold.",
+    "isAccessibleForFree": true,
+    "license": "https://creativecommons.org/licenses/by/4.0/",
+    "mainEntity": { "@type": "WebPage", "@id": "https://felipe-tommaselli.github.io/lecropfollow/" },
+    "about": [
+      { "@type": "Thing", "name": "Agricultural Robotics" },
+      { "@type": "Thing", "name": "Model-Based Reinforcement Learning" }
+    ]
+  }
+  </script>
+
+  <!-- Website/Organization Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Mobile Robotics Group, Center for Robotics (CRob), EESC/USP",
+    "url": "https://crob.eesc.usp.br/",
+    "logo": "https://felipe-tommaselli.github.io/lecropfollow/static/images/favicon.ico",
+    "sameAs": [
+      "https://github.com/Felipe-Tommaselli/lecropfollow"
+    ]
+  }
+  </script>
+</head>
+
+<body>
+
+
+  <!-- Scroll to Top Button -->
+  <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- More Works Dropdown -->
+  <div class="more-works-container">
+    <button class="more-works-btn" onclick="toggleMoreWorks()" title="View More Works from Our Lab">
+      <i class="fas fa-flask"></i>
+      Related Work
+      <i class="fas fa-chevron-down dropdown-arrow"></i>
+    </button>
+    <div class="more-works-dropdown" id="moreWorksDropdown">
+      <div class="dropdown-header">
+        <h4>Related Work</h4>
+        <button class="close-btn" onclick="toggleMoreWorks()">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="works-list">
+        <a href="https://link.springer.com/article/10.1007/s10846-025-02219-2" class="work-item" target="_blank">
+          <div class="work-info">
+            <h5>CROW</h5>
+            <p>LiDAR-based crop row tracker using a 3&times;3&thinsp;m point cloud sliding window for under-canopy
+              navigation, geometric LiDAR baseline in LeCropFollow.</p>
+            <span class="work-venue">Journal of Intelligent &amp; Robotic Systems, 2025</span>
+          </div>
+          <i class="fas fa-external-link-alt"></i>
+        </a>
+        <a href="https://roboticsconference.org/2024/program/papers/23/" class="work-item" target="_blank">
+          <div class="work-info">
+            <h5>CropFollow++</h5>
+            <p>Keypoint-based visual navigation via self-supervised heatmap estimation, the shared perception backbone
+              and geometric vision baseline for LeCropFollow.</p>
+            <span class="work-venue">Robotics: Science and Systems (RSS), 2024</span>
+          </div>
+          <i class="fas fa-external-link-alt"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <main id="main-content">
+    <!-- ============================== HERO ============================== -->
+    <section class="hero">
+      <div class="hero-body">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered">
+            <div class="column has-text-centered">
+              <h1 class="title is-1 publication-title"><span class="brand-le">Le</span>CropFollow:<br>Latent Space
+                Planning for Navigation<br>in
+                Unstructured Crop Fields</h1>
+
+              <div class="is-size-5 publication-authors">
+                <span class="author-block">
+                  <span class="author-name">Felipe Tommaselli</span><sup>1</sup>
+                  <a href="https://orcid.org/0000-0002-9638-4306" target="_blank" class="orcid-icon"><i
+                      class="ai ai-orcid"></i></a>,</span>
+                <span class="author-block">
+                  <span class="author-name">Francisco Affonso</span><sup>2</sup>
+                  <a href="https://orcid.org/0000-0002-8888-1089" target="_blank" class="orcid-icon"><i
+                      class="ai ai-orcid"></i></a>,</span>
+                <span class="author-block">
+                  <span class="author-name">Arthur Pompeu</span><sup>1</sup>
+                  <a href="https://orcid.org/0009-0006-9649-2047" target="_blank" class="orcid-icon"><i
+                      class="ai ai-orcid"></i></a>,</span>
+                <span class="author-block">
+                  <span class="author-name">Gianluca Capezzuto</span><sup>1</sup>
+                  <a href="https://orcid.org/0000-0002-5796-9846" target="_blank" class="orcid-icon"><i
+                      class="ai ai-orcid"></i></a>,</span>
+                <br>
+                <span class="author-block">
+                  <span class="author-name">Arun Narenthiran Sivakumar</span><sup>2</sup>
+                  <a href="https://orcid.org/0000-0001-8711-9431" target="_blank" class="orcid-icon"><i
+                      class="ai ai-orcid"></i></a>,</span>
+                <span class="author-block">
+                  <span class="author-name">Girish Chowdhary</span><sup>2</sup>
+                  <a href="https://orcid.org/0000-0002-4657-307X" target="_blank" class="orcid-icon"><i
+                      class="ai ai-orcid"></i></a>,</span>
+                <span class="author-block">
+                  <span class="author-name">Marcelo Becker</span><sup>1</sup>
+                  <a href="https://orcid.org/0000-0002-7508-5817" target="_blank" class="orcid-icon"><i
+                      class="ai ai-orcid"></i></a>
+                </span>
+              </div>
+              <div class="is-size-7 eql-cntrb" style="margin-top: 0.5rem;">
+                Corresponding author: f.tommaselli@usp.br
+              </div>
+              <!-- Institution logos. -->
+              <div class="org-logos">
+                <img src="static/images/logo_usp.png" alt="University of Sao Paulo"
+                  onerror="this.classList.add('logo-missing');this.alt='USP (add logo_usp.png)';">
+                <img src="static/images/logo_uiuc.png" alt="University of Illinois Urbana-Champaign"
+                  class="org-logo-uiuc" onerror="this.classList.add('logo-missing');this.alt='UIUC (add logo_uiuc.png)';">
+              </div>
+
+
+              <p class="publication-venue"><strong>IEEE RA-L&thinsp;&rsquo;26</strong> &nbsp; Robotics &amp; Automation
+                Letters</p>
+
+
+              <div class="column has-text-centered">
+                <div class="publication-links">
+                  <!-- TODO: replace with the hosted paper PDF URL -->
+                  <span class="link-block">
+                    <a href="https://arxiv.org/pdf/2606.31941" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                      <span>Paper</span>
+                    </a>
+                  </span>
+
+                  <!-- TODO: replace # with the arXiv abstract URL once the ID is available -->
+                  <span class="link-block">
+                    <a href="https://arxiv.org/abs/2606.31941" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon"><i class="ai ai-arxiv"></i></span>
+                      <span>arXiv</span>
+                    </a>
+                  </span>
+
+                  <span class="link-block">
+                    <a href="https://github.com/Felipe-Tommaselli/lecropfollow" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon"><i class="fab fa-github"></i></span>
+                      <span>Code</span>
+                    </a>
+                  </span>
+
+                  <span class="link-block">
+                    <a href="https://huggingface.co/datasets/arthurpompeu/lecrop-data" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon"><i class="fas fa-database"></i></span>
+                      <span>Data</span>
+                    </a>
+                  </span>
+
+                  <!-- TODO: replace # with the W&B report URL once ready -->
+                  <span class="link-block">
+                    <a href="https://api.wandb.ai/links/lecropfollow/mwd63kw7" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon"><i class="fas fa-chart-line"></i></span>
+                      <span>Models</span>
+                    </a>
+                  </span>
+
+                  <span class="link-block">
+                    <a href="https://www.youtube.com/watch?v=hV1fDjQsgOs&t=1s" class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon"><i class="fab fa-youtube"></i></span>
+                      <span>Video</span>
+                    </a>
+                  </span>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================== VIDEO ============================== -->
+    <section class="hero is-small is-light" id="video">
+      <div class="hero-body">
+        <div class="container">
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+              <div class="publication-video">
+                <!-- TODO: replace the embed id below with the real LeCropFollow demo video -->
+                <iframe src="https://www.youtube.com/embed/hV1fDjQsgOs" frameborder="0" 
+                  allow="autoplay; encrypted-media" allowfullscreen></iframe>
+              </div>
+              <h2 class="subtitle has-text-centered">
+                <strong><span class="brand-le">Le</span>CropFollow</strong> is a learning-based navigation framework for
+                under-canopy agricultural
+                robots
+                that plans trajectories within a learned latent world model over the uncompressed heatmap signal,
+                enabling
+                zero-shot navigation of unstructured fields without GNSS.
+              </h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End video -->
+
+
+    <!-- ============================== ABSTRACT ============================== -->
+    <section class="section hero is-light">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Abstract</h2>
+            <div class="content has-text-justified">
+              <p>
+                Unstructured navigational features, such as irregular planting or discontinuities, remain the primary
+                failure mode for under-canopy agricultural robots. Existing geometric approaches often fail in these
+                scenarios because they compress high-dimensional visual data into deterministic spatial references,
+                effectively discarding the uncertainty and semantic context required to navigate ambiguous terrain. To
+                address this, we present <strong><span class="brand-le">Le</span>CropFollow</strong>, a visual
+                navigation framework that bypasses explicit geometric
+                modeling in favor of a <strong>learned latent representation</strong>. By integrating a self-supervised
+                semantic heatmap
+                extractor with TD-MPC2, a Model-Based Reinforcement Learning (MBRL) planner, our system optimizes
+                trajectories directly within a latent manifold. The framework operates over the uncompressed heatmap
+                signal, preserving the semantic context that geometric reductions discard. We demonstrate that this
+                representational shift enables <strong>zero-shot transfer from simplified simulation to the physical
+                  world
+                  without fine-tuning</strong>. Extensive field experiments in late-stage corn fields show that
+                <strong><span class="brand-le">Le</span>CropFollow</strong>
+                matches state-of-the-art baselines in unstructured rows but significantly outperforms them in plantation
+                gaps, achieving a <strong>2.4&times; reduction in semantic failures</strong> compared to keypoint-based
+                methods. These
+                results suggest that <strong>latent planning offers a robust alternative</strong> to geometric
+                estimation for operations
+                in heterogeneous agricultural environments.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End abstract -->
+
+    <!-- ============================== FIELD DEMOS GRID ============================== -->
+    <section class="section field-demos-section" id="field-demos">
+      <div class="container is-max-widescreen">
+        <h2 class="title is-3 has-text-centered">Field Demonstrations</h2>
+        <div class="field-demos-grid">
+
+          <div class="demo-card">
+            <video autoplay muted loop playsinline preload="metadata">
+              <source src="static/demos/demo1.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <div class="demo-card">
+            <video autoplay muted loop playsinline preload="metadata">
+              <source src="static/demos/demo2.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <div class="demo-card">
+            <video autoplay muted loop playsinline preload="metadata">
+              <source src="static/demos/demo3.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <div class="demo-card">
+            <video autoplay muted loop playsinline preload="metadata">
+              <source src="static/demos/demo4.mp4" type="video/mp4">
+            </video>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- End field demos grid -->
+
+
+    <!-- ============================== METHOD / SYSTEM OVERVIEW ============================== -->
+    <section class="section">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">System Overview</h2>
+        <div class="content has-text-justified" style="margin-bottom: 1.5rem;">
+          <p>
+            LeCropFollow maps high-dimensional visual observations directly to control inputs without explicit state
+            estimation. At inference time, the perception backbone (trained via self-supervised learning) and the
+            control policy (trained via model-based reinforcement learning) are deployed zero-shot in the physical
+            field. Rather than assuming explicit geometric priors, our system performs trajectory planning in a learned
+            latent space with a trained world model.
+          </p>
+        </div>
+        <figure class="figure-block">
+          <img src="static/images/system_overview.png"
+            alt="LeCropFollow system overview: perception, training and inference" loading="lazy" />
+          <figcaption>
+            <strong>LeCropFollow System Overview.</strong>
+            <em>(Left) Perception:</em> RGB images are processed through a frozen, self-supervised backbone
+            (RowFollowNet) to extract semantic heatmaps, stacked with the previous action vector to form the encoder
+            input state.
+            <em>(Top Right) Training:</em> the Latent Encoder, Prior Control Policy, World Model, Reward, and Value
+            Function are trained via reinforcement learning (following TD-MPC2) in a simplified simulation.
+            <em>(Center &amp; Bottom) Inference:</em> the pre-trained encoder projects observations into the latent
+            space, where MPPI samples candidate trajectories and the optimal action is selected by maximizing the
+            learned value function, bridging the sim-to-real gap without online fine-tuning.
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+
+    <!-- ============================== SIM-TO-REAL ============================== -->
+    <!-- <section class="section">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">Training in Simulation</h2>
+        <div class="content has-text-justified" style="margin-bottom: 1.5rem;">
+          <p>
+            We implement the training environment in Gazebo using simple geometric primitives to emulate crop rows. We
+            treat simulation as a lower-bound out-of-distribution case for the frozen heatmap backbone, exposing the
+            downstream encoder to noisier and more diffuse activations than those often encountered at deployment.
+            Training under this harder perceptual regime is a key component of our sim-to-real recipe.
+          </p>
+        </div>
+        <figure class="figure-block">
+          <img src="static/images/simulation.png" alt="Gazebo simulation training environment" loading="lazy" />
+          <figcaption>
+            <strong>Simulation Training Environment.</strong> To facilitate rapid RL training, we utilize simplified
+            geometric primitives in Gazebo.
+            <em>(Left)</em> External view showing the robot navigating between cylinder-based rows with 0.75&nbsp;m
+            spacing and randomized color distribution.
+            <em>(Right)</em> The resulting egocentric RGB view overlaid with the predicted heatmap in simulation.
+          </figcaption>
+        </figure>
+      </div>
+    </section> -->
+
+
+    <!-- ============================== FIELD VALIDATION ============================== -->
+    <section class="section hero is-light">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">Field Validation</h2>
+        <figure class="figure-block">
+          <img src="static/images/field_validation.png"
+            alt="Aerial view of the experimental corn plantation and the plantation gap" loading="lazy" />
+          <figcaption>
+            <strong>Field Validation Environments.</strong> Top-down aerial view of the experimental corn plantation
+            during the Flowering Stage (Source: Google Earth, Airbus, Landsat/Copernicus). The figure highlights the
+            three distinct testing environments: Left Border, Center, and Right Border rows. Specific focus is drawn to
+            the <strong>Plantation Gap</strong>, an unstructured section spanning from 6.1&nbsp;m to 14.8&nbsp;m (an
+            8.7&nbsp;m discontinuity) with a degraded left row.
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+
+    <!-- ============================== RESULTS ============================== -->
+    <section class="section">
+      <div class="container is-max-widescreen">
+        <h2 class="title is-3 has-text-centered">Results</h2>
+        <div id="results-data-carousel" class="carousel results-carousel results-data-carousel">
+
+          <!-- Slide 1: Failure Mode Analysis -->
+          <div class="item">
+            <div class="results-slide">
+              <div class="results-slide-header">
+                <h3 class="results-slide-title">Failure Mode Analysis</h3>
+                <p>
+                  Our primary hypothesis is that geometric methods suffer from information over-compression in
+                  unstructured environments; the experimental data strongly supports this. While CropFollow++ yields
+                  high-confidence divergence by fitting geometry to noise within plantation gaps,
+                  <strong>LeCropFollow reduces semantic failures by 2.4&times; (29 vs 70)</strong> by treating the
+                  heatmap's spatial dispersion as part of the input signal.
+                </p>
+              </div>
+              <figure class="figure-block" style="margin-bottom:0;">
+                <img src="static/images/failure_analysis.png"
+                  alt="Failure mode analysis: failure distribution and semantic vs physical trade-off" loading="lazy" />
+                <figcaption class="results-slide-figcaption">
+                  <em>(Left)</em> Comparative breakdown of failure causes across all methods during field trials.
+                  <em>(Right)</em> Semantic vs. Physical failure aggregation — LeCropFollow cuts Semantic Failures
+                  by 2.4&times; vs. baselines.
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+
+          <!-- Slide 2: Ablation -->
+          <div class="item">
+            <div class="results-slide">
+              <div class="results-slide-header">
+                <h3 class="results-slide-title">Unstructured Resiliency &amp; Ablation</h3>
+                <p>
+                  CropFollow++ (G1) degrades substantially in this regime (6.7% success), as its keypoint estimation
+                  produces unreliable references when the vanishing point loses consistency. CROW (G3) retains partial
+                  robustness (53.3%) by leveraging a 3&times;3&nbsp;m point cloud window to track adjacent rows.
+                  Operating on the same visual input as CropFollow++,
+                  <strong>LeCropFollow (L3) traverses the gap in 14 of 15 runs (93.3%)</strong>: in high-uncertainty
+                  regions, the policy applies small angular corrections rather than tracking the noisy keypoint
+                  references, maintaining a smooth heading until the row structure resumes.
+                </p>
+              </div>
+              <figure class="figure-block" style="margin-bottom:0;">
+                <img src="static/images/ablation2.png"
+                  alt="Gap traversal ablation: collisions per run across geometric and learned variants"
+                  loading="lazy" />
+                <figcaption class="results-slide-figcaption">
+                  Collisions per run over 15 traversals of the 8.7&nbsp;m gap. Geometric baselines
+                  (G1&ndash;G3) vs. Learned variants (L1&ndash;L3). The full formulation achieves the lowest
+                  median and tightest spread.
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+
+          <!-- Slide 3: Comparative Table -->
+          <div class="item">
+            <div class="results-slide results-slide--table">
+              <div class="results-slide-header">
+                <h3 class="results-slide-title">Comparative Field Trials</h3>
+                <p>
+                  LeCropFollow performs comparably to established state-of-the-art methods, matching the best
+                  baseline on maximum gap-free distance, while both baseline controllers were fine-tuned to
+                  fit experimental conditions, ours was deployed in a fully <strong>zero-shot</strong> manner
+                  (Flowering Stage, 12 runs each).
+                </p>
+              </div>
+              <div class="table-wrap" style="width:100%;max-width:100%;">
+                <table class="results-table">
+                  <thead>
+                    <tr>
+                      <th>Method</th>
+                      <th>Collisions &darr;</th>
+                      <th>Max Dist. w/o Col. [m] &uarr;</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="family-cpp">CropFollow++</td>
+                      <td>5.3 &plusmn; 1.6</td>
+                      <td>38.9</td>
+                    </tr>
+                    <tr>
+                      <td class="family-crow">CROW</td>
+                      <td>6.5 &plusmn; 1.4</td>
+                      <td>37.9</td>
+                    </tr>
+                    <tr class="row-highlight">
+                      <td class="family-lec"><strong>LeCropFollow</strong></td>
+                      <td><strong>5.1 &plusmn; 1.8</strong></td>
+                      <td><strong>38.9</strong></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <p class="results-slide-figcaption">
+                Harvested-stage runs yield 4.8&nbsp;&plusmn;&nbsp;1.5 collisions and
+                28.4&nbsp;&plusmn;&nbsp;5.7&nbsp;m maximum collision-free distance — no significant difference
+                from the Flowering distribution, indicating the policy is not implicitly fitted to a single
+                perceptual configuration of the field.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+
+
+    <!-- ============================== BIBTEX ============================== -->
+    <section class="section" id="BibTeX">
+      <div class="container is-max-desktop content">
+        <div class="bibtex-header">
+          <h2 class="title">BibTeX</h2>
+          <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
+            <i class="fas fa-copy"></i>
+            <span class="copy-text">Copy</span>
+          </button>
+        </div>
+        <pre id="bibtex-code"><code>@article{tommaselli2026lecropfollow,
+  title         = {LeCropFollow: Latent Space Planning for Navigation in Unstructured Crop Fields},
+  author        = {Tommaselli, Felipe and Affonso, Francisco and Pompeu, Arthur and Capezzuto, Gianluca and Sivakumar, Arun Narenthiran and Chowdhary, Girish and Becker, Marcelo},
+  journal       = {IEEE Robotics and Automation Letters},
+  year          = {2026},
+  note          = {Accepted for publication},
+  eprint        = {2606.31941},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.RO}
+}</code></pre>
+      </div>
+    </section>
+    <!-- End BibTeX -->
+
+
+    <!-- ============================== ACKNOWLEDGMENTS ============================== -->
+    <!-- <section class="section hero is-light">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">Acknowledgments</h2>
+        <div class="content has-text-justified">
+          <p>
+            The authors thank Davide Jarik De Rosa and Jo&atilde;o H. Al&eacute;ssio for their dedicated assistance
+            throughout the field deployments. The authors gratefully acknowledge Embrapa Instrumentation (S&atilde;o
+            Carlos, SP, Brazil) for providing the facilities and field sites, the Funda&ccedil;&atilde;o de Apoio
+            &agrave; F&iacute;sica e &agrave; Qu&iacute;mica (FAFQ) for operational support, and the Mobile Robotics
+            Group at the Center for Robotics (CRob), EESC USP, for the laboratory infrastructure and the robotic
+            platform.
+          </p>
+          <p>
+            This work was supported in part by the S&atilde;o Paulo Research Foundation (FAPESP), Grants #2022/08330-9,
+            #2023/15926-8, #2023/17678-1, #2024/09442-0, #2025/20858-7 and #2025/22381-3; the Conselho Nacional de
+            Desenvolvimento Cient&iacute;fico e Tecnol&oacute;gico (CNPq), Grant 308092/2020-1; and the
+            Coordena&ccedil;&atilde;o de Aperfei&ccedil;oamento de Pessoal de N&iacute;vel Superior (CAPES), which
+            funded the Article Processing Charge.
+          </p>
+        </div>
+      </div>
+    </section> -->
+
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content has-text-centered">
+            <p>
+              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template"
+                target="_blank">Academic Project Page Template</a> which was adopted from the <a
+                href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+              You are free to borrow the source code of this website, we just ask that you link back to this page in the
+              footer. <br> This website is licensed under a <a rel="license"
+                href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+                Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
