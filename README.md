@@ -9,7 +9,7 @@
 <p align="center">
   <strong>Felipe Tommaselli</strong><sup>1</sup> &middot;
   <strong>Francisco Affonso</strong><sup>2</sup> &middot;
-  <strong>Arthur Pompeu</strong><sup>1</sup> &middot;
+  <strong>Arthur Rocha</strong><sup>1</sup> &middot;
   <strong>Gianluca Capezzuto</strong><sup>1</sup><br>
   <strong>Arun Narenthiran Sivakumar</strong><sup>2</sup> &middot;
   <strong>Girish Chowdhary</strong><sup>2</sup> &middot;
@@ -114,15 +114,15 @@ A complete topic contract between ROS and the RL agent is documented in [`SKILLS
 If you use this work in your research, please cite:
 
 ```bibtex
-@article{tommaselli2026lecropfollow,
-  title         = {LeCropFollow: Latent Space Planning for Navigation in Unstructured Crop Fields},
-  author        = {Tommaselli, Felipe and Affonso, Francisco and Pompeu, Arthur and Capezzuto, Gianluca and Sivakumar, Arun Narenthiran and Chowdhary, Girish and Becker, Marcelo},
-  journal       = {IEEE Robotics and Automation Letters},
-  year          = {2026},
-  note          = {Accepted for publication},
-  eprint        = {2606.31941},
-  archivePrefix = {arXiv},
-  primaryClass  = {cs.RO}
+@ARTICLE{tommaselli2026lecropfollow,
+  author={Tommaselli, Felipe and Affonso, Francisco and Rocha, Arthur and Capezzuto, Gianluca and Sivakumar, Arun Narenthiran and Chowdhary, Girish and Becker, Marcelo},
+  journal={IEEE Robotics and Automation Letters}, 
+  title={LeCropFollow: Latent Space Planning for Navigation in Unstructured Crop Fields}, 
+  year={2026},
+  volume={},
+  number={},
+  pages={1-8},
+  doi={10.1109/LRA.2026.3710052}
 }
 ```
 
