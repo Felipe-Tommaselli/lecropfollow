@@ -26,8 +26,8 @@
 </p>
 
 <p align="center">
-  <a href="https://arxiv.org/pdf/2606.31941">
-    <img src="https://img.shields.io/badge/Paper-PDF-b31b1b?style=flat-square&logo=arxiv&logoColor=white" alt="Official Paper (soon)">
+  <a href="https://ieeexplore.ieee.org/abstract/document/11594425">
+    <img src="https://img.shields.io/badge/Paper-PDF-b31b1b?style=flat-square&logo=arxiv&logoColor=white" alt="Official Paper">
   </a>&nbsp;
   <a href="https://arxiv.org/abs/2606.31941">
     <img src="https://img.shields.io/badge/arXiv-2606.31941-b31b1b?style=flat-square&logo=arxiv&logoColor=white" alt="arXiv">
@@ -119,11 +119,10 @@ If you use this work in your research, please cite:
   journal={IEEE Robotics and Automation Letters}, 
   title={LeCropFollow: Latent Space Planning for Navigation in Unstructured Crop Fields}, 
   year={2026},
-  volume={},
-  number={},
-  pages={1-8},
-  doi={10.1109/LRA.2026.3710052}
-}
+  volume={11},
+  number={9},
+  pages={10369-10376},
+  doi={10.1109/LRA.2026.3710052}}
 ```
 
 This project builds on TD-MPC2. If you use the agent architecture, please also cite:
