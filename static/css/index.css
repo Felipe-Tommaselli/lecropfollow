@@ -795,6 +795,15 @@ a:focus {
   margin-top: 0.5rem;
 }
 
+/* Inline SVG icons (replacement for the FontAwesome JS kit) */
+.fa-icon {
+  height: 1em;
+  width: 1em;
+  fill: currentColor;
+  vertical-align: -0.125em;
+  flex-shrink: 0;
+}
+
 .orcid-icon {
   color: #a6ce39 !important;
   font-size: 0.95rem;

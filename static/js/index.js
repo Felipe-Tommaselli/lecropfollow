@@ -90,10 +90,10 @@ window.addEventListener('scroll', function() {
     }
 });
 
-// Video carousel autoplay when in view
+// Play videos only while in view (demo grid + carousels) to avoid loading ~17 MB up front
 function setupVideoCarouselAutoplay() {
-    const carouselVideos = document.querySelectorAll('.results-carousel video');
-    
+    const carouselVideos = document.querySelectorAll('.results-carousel video, .demo-card video');
+
     if (carouselVideos.length === 0) return;
     
     const observer = new IntersectionObserver((entries) => {

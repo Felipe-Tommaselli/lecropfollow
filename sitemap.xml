@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://felipe-tommaselli.github.io/lecropfollow/</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://felipe-tommaselli.github.io/lecropfollow/static/images/social_preview.jpg</image:loc>
+      <image:title>LeCropFollow: Latent Space Planning for Navigation in Unstructured Crop Fields</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://felipe-tommaselli.github.io/lecropfollow/static/images/system_overview.png</image:loc>
+      <image:title>LeCropFollow system overview</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://felipe-tommaselli.github.io/lecropfollow/static/images/field_validation.jpg</image:loc>
+      <image:title>LeCropFollow field validation environments</image:title>
+    </image:image>
+  </url>
+</urlset>
